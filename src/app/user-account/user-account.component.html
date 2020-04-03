@@ -1,0 +1,29 @@
+<p>user-account works!</p>
+
+<div>
+        <h1> Amazon {{headerInfo}} Details</h1>
+    username {{userAccountInfo.username}}<br/>
+    status 
+    <div *ngIf="userAccountInfo.status.localeCompare('primeUser')==0; else notPrime">
+        <p>Active Amazon Prime User </p>    
+    </div>
+    <ng-template #notPrime>
+        Prime membership not yet opted
+    </ng-template>
+    Address {{userAccountInfo.address[0]}}<br/>
+    {{userAccountInfo.address[1]}}<br/>
+    Phone Number {{userAccountInfo.phoneNumber}}<br/>
+    Bank Info {{userAccountInfo.bankInfo}}<br/>
+   <hr/>
+   <p *ngFor="let address of userAccountInfo.address">{{address}}</p>
+</div>
+<hr style=" border-top: 1px solid red;">
+Switch {{userAccountInfo.status}}
+<div [ngSwitch] =userAccountInfo.status>
+    <div *ngSwitchCase="'regular'">{{userAccountInfo.username}} Not a Prime Member</div>
+    <div *ngSwitchCase="'prime-india'">{{userAccountInfo.username}} is a Bollywood Prime Member + Amazon Prime Service</div>
+    <div *ngSwitchCase="'prime-hollywood'">{{userAccountInfo.username}}  is a Complete Prime Member + Amazon Prime Service</div>
+    <div *ngSwitchDefault>Error</div>
+
+</div>
+

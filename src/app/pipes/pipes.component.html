@@ -1,0 +1,32 @@
+<p>pipes works!</p>
+<br/>{{username | lowercase}}
+<br/>{{companyName | titlecase}}
+<hr/>
+Date & Time 
+<br/>{{todayDate}}
+<br/>{{todayDate | date:'short'}}
+<br/>{{todayDate | date:'shortDate'}}
+<br/>{{todayDate | date:'shortTime'}}
+<hr/>
+Currency 
+<br/>USD :- {{cost | currency}}
+<br/>GBP :- {{cost | currency : 'GBP'}}
+<br/>INR :- {{cost | currency : 'INR'}}
+<br/>{{student}}
+<br/>{{student | json}}
+<hr/>
+Percent
+<br/> Profit {{profit | percent}}
+<br/> Profit {{profit/100 | percent}}
+<br/> Profit {{profit/100 | percent :'2.3-5'}}
+<br/> Profit {{profit/100 | percent :'4.3-5'}}
+
+
+
+
+
+
+
+
+
+

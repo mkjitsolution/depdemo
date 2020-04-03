@@ -1,0 +1,10 @@
+<p>date-auto-refersh works!</p>
+<p style="color: blue;">
+{{todaysAutoDatetime}}
+</p>
+<br/>
+<button (click)="doSomeThing()">CLick</button><br/>
+Number 1 <input type="number" name="n1" id="n1id" (blur)="readData($event)"/>
+Number 2 <input type="number" name="n2" id="n2id" (keyup)="calculateSum($event)"/>
+<p id="sumid">{{sum}}</p>
+
